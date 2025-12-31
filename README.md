@@ -1,4 +1,4 @@
-# 💫 About Me:
+# 💫 ABOUT ME:
 I am a web developer with hands-on experience in building full-stack web applications using modern technologies. I work primarily with HTML, CSS, JavaScript, React, and backend tools like Node.js, Express, and MongoDB.<br><br>I enjoy turning ideas into real products—whether it’s student management systems, quiz platforms, AI-powered tools, or productivity web apps. I focus on clean UI, practical features, and scalable architecture.<br><br>I’m also exploring AI-integrated web applications, no-code/low-code tools, and open-source projects. My goal is to grow as a Full Stack Developer and AI Tools Developer, building solutions that are useful, user-friendly, and future-ready.
 
 
