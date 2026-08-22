@@ -1,16 +1,16 @@
 <table>
 <tr>
-<td width="25%" align="left" valign="middle">
+<td width="20%" align="left" valign="middle">
 
-<!-- Typing SVG — one word per line, original size -->
+<!-- Typing SVG — one word per line, larger font -->
 <a href="https://github.com/ChitkulLakshya">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=28&pause=600&color=F7DF1E&center=false&vCenter=false&random=false&width=300&height=220&lines=Hi+I'm+Lakshya;AI;&;FULL;STACK;DEVELOPER" alt="Typing SVG" />
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=36&pause=600&color=F7DF1E&center=false&vCenter=false&random=false&width=200&height=280&lines=Hi+I'm+Lakshya;AI;&;FULL;STACK;DEVELOPER" alt="Typing SVG" />
 </a>
 
 </td>
-<td width="75%" align="right" valign="middle">
+<td width="80%" align="right" valign="middle">
 
-<img src="assets/coder.gif" alt="Coder" width="70%"/>
+<img src="assets/coder.gif" alt="Coder" width="100%"/>
 
 </td>
 </tr>
