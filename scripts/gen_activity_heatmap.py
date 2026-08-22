@@ -110,8 +110,8 @@ def render_heatmap(events, output_path, username):
     norm = mcolors.BoundaryNorm(bounds, cmap.N)
 
     # Create figure
-    fig, ax = plt.subplots(figsize=(13, 4.5), facecolor=BG_COLOR)
-    ax.set_facecolor(BG_COLOR)
+    fig, ax = plt.subplots(figsize=(13, 4.5), facecolor='none')
+    ax.set_facecolor('none')
 
     # Draw cells with rounded corners and gaps
     cell_w = 1.0
@@ -126,7 +126,7 @@ def render_heatmap(events, output_path, username):
             count = grid[day, hour]
 
             if count == 0:
-                color = CELL_BG
+                color = '#161b22'
             else:
                 idx = min(4, int(np.searchsorted([0.5, bounds[2], bounds[3]], count)))
                 color = green_colors[idx]
@@ -174,7 +174,7 @@ def render_heatmap(events, output_path, username):
     ax.axis('off')
 
     plt.subplots_adjust(left=0.05, right=0.98, top=0.95, bottom=0.12)
-    fig.savefig(output_path, facecolor=BG_COLOR, dpi=150, bbox_inches='tight', pad_inches=0.4)
+    fig.savefig(output_path, facecolor='none', transparent=True, dpi=150, bbox_inches='tight', pad_inches=0.4)
     plt.close(fig)
     print(f'Activity heatmap saved: {output_path}')
 

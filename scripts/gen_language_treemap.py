@@ -210,11 +210,11 @@ def render_treemap(lang_totals, output_path, username):
     if not lang_totals:
         print('No language data to render!')
         # Create a placeholder image
-        fig, ax = plt.subplots(figsize=(10, 6), facecolor=BG_COLOR)
+        fig, ax = plt.subplots(figsize=(10, 6), facecolor='none')
         ax.text(0.5, 0.5, 'No language data available',
                 ha='center', va='center', color=TEXT_COLOR, fontsize=16)
         ax.axis('off')
-        fig.savefig(output_path, facecolor=BG_COLOR, dpi=150, bbox_inches='tight')
+        fig.savefig(output_path, facecolor='none', transparent=True, dpi=150, bbox_inches='tight')
         plt.close(fig)
         return
 
@@ -239,8 +239,8 @@ def render_treemap(lang_totals, output_path, username):
         return f'{pct:.1f}%' if pct >= 4 else ''
 
     # Create figure
-    fig, ax = plt.subplots(figsize=(11, 7), facecolor=BG_COLOR)
-    ax.set_facecolor(BG_COLOR)
+    fig, ax = plt.subplots(figsize=(11, 7), facecolor='none')
+    ax.set_facecolor('none')
 
     # Plot donut chart
     wedges, _texts, autotexts = ax.pie(
@@ -280,7 +280,7 @@ def render_treemap(lang_totals, output_path, username):
     )
 
     plt.subplots_adjust(left=0.02, right=0.68, top=0.96, bottom=0.04)
-    fig.savefig(output_path, facecolor=BG_COLOR, dpi=150, bbox_inches='tight', pad_inches=0.3)
+    fig.savefig(output_path, facecolor='none', transparent=True, dpi=150, bbox_inches='tight', pad_inches=0.3)
     plt.close(fig)
     print(f'Donut chart saved: {output_path}')
 

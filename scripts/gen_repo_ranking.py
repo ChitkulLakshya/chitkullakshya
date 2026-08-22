@@ -110,11 +110,11 @@ def count_commits(username, repo_name, token=None):
 def render_ranking(repos_data, output_path, username):
     """Render the ranked list as a PNG image."""
     if not repos_data:
-        fig, ax = plt.subplots(figsize=(10, 4), facecolor=BG_COLOR)
+        fig, ax = plt.subplots(figsize=(10, 4), facecolor='none')
         ax.text(0.5, 0.5, 'No repo data available',
                 ha='center', va='center', color=TEXT_COLOR, fontsize=14)
         ax.axis('off')
-        fig.savefig(output_path, facecolor=BG_COLOR, dpi=150, bbox_inches='tight')
+        fig.savefig(output_path, facecolor='none', transparent=True, dpi=150, bbox_inches='tight')
         plt.close(fig)
         return
 
@@ -128,8 +128,8 @@ def render_ranking(repos_data, output_path, username):
     n = len(top)
     fig_width = 16
     fig_height = 1.2 + n * 0.85
-    fig, ax = plt.subplots(figsize=(fig_width, fig_height), facecolor=BG_COLOR)
-    ax.set_facecolor(BG_COLOR)
+    fig, ax = plt.subplots(figsize=(fig_width, fig_height), facecolor='none')
+    ax.set_facecolor('none')
 
     y_start = 0.96
     y_step = 1.0 / (n + 2)
@@ -140,19 +140,15 @@ def render_ranking(repos_data, output_path, username):
         # Alternating row background
         if i % 2 == 0:
             ax.axhspan(y - y_step * 0.45, y + y_step * 0.45,
-                       color=ROW_ALT_BG, zorder=0, alpha=0.5)
+                       color='#161b22', zorder=0, alpha=0.3)
 
         # Rank number
         rank_color = ACCENT_GOLD if i < 3 else TEXT_DIM
         ax.text(0.02, y, f'{i+1}', ha='left', va='center',
                 color=rank_color, fontsize=18, fontweight='bold', fontfamily='sans-serif')
 
-        # Language color dot
-        lang_color = LINGUIST_COLORS.get(repo.get('language'), DEFAULT_COLOR)
-        ax.plot(0.08, y, 'o', color=lang_color, markersize=11, zorder=5)
-
         # Repo name
-        ax.text(0.11, y, repo['name'], ha='left', va='center',
+        ax.text(0.08, y, repo['name'], ha='left', va='center',
                 color=TEXT_BRIGHT, fontsize=15, fontweight='bold', fontfamily='sans-serif',
                 clip_on=True)
 
@@ -171,7 +167,7 @@ def render_ranking(repos_data, output_path, username):
     ax.axis('off')
 
     plt.subplots_adjust(left=0.02, right=0.98, top=0.98, bottom=0.02)
-    fig.savefig(output_path, facecolor=BG_COLOR, dpi=150, bbox_inches='tight', pad_inches=0.3)
+    fig.savefig(output_path, facecolor='none', transparent=True, dpi=150, bbox_inches='tight', pad_inches=0.3)
     plt.close(fig)
     print(f'Repo ranking saved: {output_path}')
 
