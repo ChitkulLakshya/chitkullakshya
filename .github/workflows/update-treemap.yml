@@ -41,12 +41,6 @@ jobs:
         run: |
           python scripts/gen_language_treemap.py --user ChitkulLakshya --output assets/language-treemap.png
 
-      - name: Generate contribution heatmap
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          python scripts/gen_contribution_heatmap.py --user ChitkulLakshya --output assets/contribution-heatmap.png
-
       - name: Generate repo ranking
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -63,7 +57,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add assets/language-treemap.png assets/contribution-heatmap.png assets/repo-ranking.png assets/activity-heatmap.png
+          git add assets/language-treemap.png assets/repo-ranking.png assets/activity-heatmap.png
           if git diff --cached --quiet; then
             echo "No changes to stats, skipping commit."
           else

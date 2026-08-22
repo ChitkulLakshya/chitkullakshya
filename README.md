@@ -126,14 +126,6 @@ Currently exploring **AI-integrated web apps**, **no-code/low-code tools**, and 
 
 <div align="center">
 
-<img src="assets/contribution-heatmap.png" alt="" width="95%"/>
-
-</div>
-
----
-
-<div align="center">
-
 <img src="assets/repo-ranking.png" alt="" width="90%"/>
 
 </div>

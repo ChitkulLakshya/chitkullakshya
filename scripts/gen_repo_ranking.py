@@ -121,8 +121,8 @@ def render_ranking(repos_data, output_path, username):
     # Sort by stars desc, then commits desc
     repos_data.sort(key=lambda x: (x['stars'], x['commits']), reverse=True)
 
-    # Take top 15
-    top = repos_data[:15]
+    # Take top 5
+    top = repos_data[:5]
 
     # Layout
     row_height = 0.065
