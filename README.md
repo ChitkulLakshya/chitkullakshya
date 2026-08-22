@@ -2,9 +2,9 @@
 <tr>
 <td width="20%" align="left" valign="middle">
 
-<!-- Typing SVG — "Hi I'm" stays, "Lakshya" types then backspaces -->
+<!-- Typing SVG — Hi I'm types then backspaces, Lakshya types then backspaces on next line -->
 <a href="https://github.com/ChitkulLakshya">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=36&pause=600&color=F7DF1E&center=false&vCenter=false&random=false&width=200&height=50&lines=Hi+I'm&repeat=false" alt="Typing SVG" />
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=36&pause=600&color=F7DF1E&center=false&vCenter=false&random=false&width=200&height=50&lines=Hi+I'm" alt="Typing SVG" />
   <br/>
   <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=36&pause=800&color=F7DF1E&center=false&vCenter=false&random=false&width=200&height=50&lines=Lakshya" alt="Typing SVG" />
 </a>
