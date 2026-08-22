@@ -110,7 +110,7 @@ def render_heatmap(events, output_path, username):
     norm = mcolors.BoundaryNorm(bounds, cmap.N)
 
     # Create figure
-    fig, ax = plt.subplots(figsize=(13, 4.5), facecolor='none')
+    fig, ax = plt.subplots(figsize=(16, 5.5), facecolor='none')
     ax.set_facecolor('none')
 
     # Draw cells with rounded corners and gaps
@@ -143,20 +143,20 @@ def render_heatmap(events, output_path, username):
     for hour in range(0, 24, 2):
         x = hour * (cell_w + gap_x) + cell_w / 2
         ax.text(x, -0.8, f'{hour:02d}',
-                ha='center', va='top', color=TEXT_COLOR, fontsize=8, fontfamily='sans-serif')
+                ha='center', va='top', color=TEXT_COLOR, fontsize=11, fontfamily='sans-serif')
 
     # Day labels
     day_names = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
     for day in range(7):
         y = (6 - day) * (cell_h + gap_y) + cell_h / 2
         ax.text(-1.5, y, day_names[day],
-                ha='right', va='center', color=TEXT_COLOR, fontsize=9, fontfamily='sans-serif')
+                ha='right', va='center', color=TEXT_COLOR, fontsize=12, fontfamily='sans-serif')
 
     # Legend
     legend_y = -2.0
     legend_x = 24 * (cell_w + gap_x) - 5 * (cell_w * 0.8 + 0.1)
     ax.text(legend_x - 0.5, legend_y + 0.4, 'Less',
-            ha='right', va='center', color=TEXT_COLOR, fontsize=8)
+            ha='right', va='center', color=TEXT_COLOR, fontsize=11)
     for i, color in enumerate(green_colors):
         x = legend_x + i * (cell_w * 0.8 + 0.1)
         rect = FancyBboxPatch(
@@ -166,7 +166,7 @@ def render_heatmap(events, output_path, username):
         )
         ax.add_patch(rect)
     ax.text(legend_x + 5 * (cell_w * 0.8 + 0.1) + 0.3, legend_y + 0.4, 'More',
-            ha='left', va='center', color=TEXT_COLOR, fontsize=8)
+            ha='left', va='center', color=TEXT_COLOR, fontsize=11)
 
     ax.set_xlim(-3, 24 * (cell_w + gap_x) + 1)
     ax.set_ylim(legend_y - 1, 7 * (cell_h + gap_y) + 1)

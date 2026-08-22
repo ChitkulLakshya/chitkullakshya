@@ -124,10 +124,10 @@ def render_ranking(repos_data, output_path, username):
     # Take top 5
     top = repos_data[:5]
 
-    # Layout — wide and short for a clean full-width banner look
+    # Layout — wide and tall for comfortable reading
     n = len(top)
-    fig_width = 16
-    fig_height = 1.2 + n * 0.85
+    fig_width = 18
+    fig_height = 2.0 + n * 1.4
     fig, ax = plt.subplots(figsize=(fig_width, fig_height), facecolor='none')
     ax.set_facecolor('none')
 
@@ -145,22 +145,22 @@ def render_ranking(repos_data, output_path, username):
         # Rank number
         rank_color = ACCENT_GOLD if i < 3 else TEXT_DIM
         ax.text(0.02, y, f'{i+1}', ha='left', va='center',
-                color=rank_color, fontsize=18, fontweight='bold', fontfamily='sans-serif')
+                color=rank_color, fontsize=28, fontweight='bold', fontfamily='sans-serif')
 
         # Repo name
         ax.text(0.08, y, repo['name'], ha='left', va='center',
-                color=TEXT_BRIGHT, fontsize=15, fontweight='bold', fontfamily='sans-serif',
+                color=TEXT_BRIGHT, fontsize=22, fontweight='bold', fontfamily='sans-serif',
                 clip_on=True)
 
         # Stars (right side)
         stars_text = f'★ {repo["stars"]}'
         ax.text(0.80, y, stars_text, ha='right', va='center',
-                color=ACCENT_GOLD, fontsize=14, fontfamily='sans-serif')
+                color=ACCENT_GOLD, fontsize=20, fontfamily='sans-serif')
 
         # Commits (further right)
         commits_text = f'◆ {repo["commits"]} commits'
         ax.text(0.97, y, commits_text, ha='right', va='center',
-                color=ACCENT_GREEN, fontsize=14, fontfamily='sans-serif')
+                color=ACCENT_GREEN, fontsize=20, fontfamily='sans-serif')
 
     ax.set_xlim(0, 1)
     ax.set_ylim(-0.04, 1.0)

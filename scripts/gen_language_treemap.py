@@ -239,7 +239,7 @@ def render_treemap(lang_totals, output_path, username):
         return f'{pct:.1f}%' if pct >= 4 else ''
 
     # Create figure
-    fig, ax = plt.subplots(figsize=(11, 7), facecolor='none')
+    fig, ax = plt.subplots(figsize=(14, 9), facecolor='none')
     ax.set_facecolor('none')
 
     # Plot donut chart
@@ -251,15 +251,15 @@ def render_treemap(lang_totals, output_path, username):
         autopct=autopct,
         pctdistance=0.78,
         wedgeprops={'width': 0.42, 'edgecolor': BG_COLOR, 'linewidth': 2},
-        textprops={'color': TEXT_COLOR, 'fontsize': 10, 'fontweight': 'bold',
+        textprops={'color': TEXT_COLOR, 'fontsize': 14, 'fontweight': 'bold',
                    'fontfamily': 'sans-serif'},
     )
 
     # Center label: total languages
     ax.text(0, 0.08, str(len(lang_totals)), ha='center', va='center',
-            color=TITLE_COLOR, fontsize=34, fontweight='bold', fontfamily='sans-serif')
+            color=TITLE_COLOR, fontsize=44, fontweight='bold', fontfamily='sans-serif')
     ax.text(0, -0.16, 'languages', ha='center', va='center',
-            color=SUBTITLE_COLOR, fontsize=12, fontfamily='sans-serif')
+            color=SUBTITLE_COLOR, fontsize=16, fontfamily='sans-serif')
 
     ax.set_aspect('equal')
 
@@ -276,7 +276,7 @@ def render_treemap(lang_totals, output_path, username):
         bbox_to_anchor=(1.01, 0.5),
         frameon=False,
         labelcolor=TEXT_COLOR,
-        fontsize=9,
+        fontsize=12,
     )
 
     plt.subplots_adjust(left=0.02, right=0.68, top=0.96, bottom=0.04)
