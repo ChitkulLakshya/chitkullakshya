@@ -1,17 +1,27 @@
-<div align="center">
+<table>
+<tr>
+<td width="25%" align="left" valign="middle">
 
-<!-- Typing SVG -->
+<!-- Typing SVG — one word per line, original size -->
 <a href="https://github.com/ChitkulLakshya">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=28&pause=1000&color=F7DF1E&center=true&vCenter=true&random=false&width=600&height=80&lines=Hi+I'm+Lakshya;AI+%26+Full-Stack+Developer;React+%E2%80%A2+Node.js+%E2%80%A2+Python" alt="Typing SVG" />
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=28&pause=600&color=F7DF1E&center=false&vCenter=false&random=false&width=300&height=220&lines=Hi+I'm+Lakshya;AI;&;FULL;STACK;DEVELOPER" alt="Typing SVG" />
 </a>
 
-<!-- Socials -->
-<p>
-  <a href="https://linkedin.com/in/chitkullakshya"><img src="https://img.shields.io/badge/LinkedIn-%230077B5.svg?style=flat-square&logo=linkedin&logoColor=white" alt="LinkedIn"/></a>
-  <a href="mailto:chitkullakshya@gmail.com"><img src="https://img.shields.io/badge/Email-D14836?style=flat-square&logo=gmail&logoColor=white" alt="Email"/></a>
-  <a href="https://github.com/ChitkulLakshya"><img src="https://img.shields.io/badge/GitHub-%23121011.svg?style=flat-square&logo=github&logoColor=white" alt="GitHub"/></a>
-  <a href="https://chitkullakshya.me"><img src="https://img.shields.io/badge/Portfolio-chitkullakshya.me-4285F4?style=flat-square&logo=googlechrome&logoColor=white" alt="Portfolio"/></a>
-</p>
+</td>
+<td width="75%" align="right" valign="middle">
+
+<img src="assets/coder.gif" alt="Coder" width="40%"/>
+
+</td>
+</tr>
+</table>
+
+<div align="center">
+
+<a href="https://linkedin.com/in/chitkullakshya"><img src="https://img.shields.io/badge/LinkedIn-%230077B5.svg?style=flat-square&logo=linkedin&logoColor=white" alt="LinkedIn"/></a>
+<a href="mailto:chitkullakshya@gmail.com"><img src="https://img.shields.io/badge/Email-D14836?style=flat-square&logo=gmail&logoColor=white" alt="Email"/></a>
+<a href="https://github.com/ChitkulLakshya"><img src="https://img.shields.io/badge/GitHub-%23121011.svg?style=flat-square&logo=github&logoColor=white" alt="GitHub"/></a>
+<a href="https://chitkullakshya.me"><img src="https://img.shields.io/badge/Portfolio-chitkullakshya.me-4285F4?style=flat-square&logo=googlechrome&logoColor=white" alt="Portfolio"/></a>
 
 </div>
 
@@ -113,10 +123,10 @@ Currently exploring **AI-integrated web apps**, **no-code/low-code tools**, and 
 
 <table>
 <tr>
-<td width="33%" align="center" valign="middle">
-<img src="assets/skills-animation.gif" alt="" width="100%"/>
+<td width="40%" align="center" valign="middle">
+<img src="assets/skills-animation.gif" alt="" width="70%"/>
 </td>
-<td width="67%" align="center" valign="middle">
+<td width="60%" align="center" valign="middle">
 <img src="assets/language-treemap.png" alt="" width="100%"/>
 </td>
 </tr>
