@@ -21,7 +21,8 @@ def main():
     for fp in frame_paths:
         img = Image.open(fp).convert('RGBA')
         alpha = img.split()[3]
-        p = img.convert('RGB').convert('P', palette=Image.ADAPTIVE, colors=MAX_COLORS - 1)
+        # Use ADAPTIVE palette with dithering for better color reproduction
+        p = img.convert('RGB').convert('P', palette=Image.ADAPTIVE, colors=MAX_COLORS - 1, dither=Image.Dither.FLOYDSTEINBERG)
         p.paste(255, mask=Image.eval(alpha, lambda a: 255 if a < 128 else 0))
         p.info['transparency'] = 255
         frames.append(p)
