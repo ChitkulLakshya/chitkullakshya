@@ -124,11 +124,11 @@ def render_ranking(repos_data, output_path, username):
     # Take top 5
     top = repos_data[:5]
 
-    # Layout
-    row_height = 0.065
+    # Layout — wide and short for a clean full-width banner look
     n = len(top)
-    fig_height = 2.0 + n * row_height * 11
-    fig, ax = plt.subplots(figsize=(11, fig_height / 11 * 11), facecolor=BG_COLOR)
+    fig_width = 16
+    fig_height = 1.2 + n * 0.85
+    fig, ax = plt.subplots(figsize=(fig_width, fig_height), facecolor=BG_COLOR)
     ax.set_facecolor(BG_COLOR)
 
     y_start = 0.96
@@ -145,26 +145,26 @@ def render_ranking(repos_data, output_path, username):
         # Rank number
         rank_color = ACCENT_GOLD if i < 3 else TEXT_DIM
         ax.text(0.02, y, f'{i+1}', ha='left', va='center',
-                color=rank_color, fontsize=13, fontweight='bold', fontfamily='sans-serif')
+                color=rank_color, fontsize=18, fontweight='bold', fontfamily='sans-serif')
 
         # Language color dot
         lang_color = LINGUIST_COLORS.get(repo.get('language'), DEFAULT_COLOR)
-        ax.plot(0.08, y, 'o', color=lang_color, markersize=8, zorder=5)
+        ax.plot(0.08, y, 'o', color=lang_color, markersize=11, zorder=5)
 
         # Repo name
         ax.text(0.11, y, repo['name'], ha='left', va='center',
-                color=TEXT_BRIGHT, fontsize=11, fontweight='bold', fontfamily='sans-serif',
+                color=TEXT_BRIGHT, fontsize=15, fontweight='bold', fontfamily='sans-serif',
                 clip_on=True)
 
         # Stars (right side)
         stars_text = f'★ {repo["stars"]}'
-        ax.text(0.78, y, stars_text, ha='right', va='center',
-                color=ACCENT_GOLD, fontsize=10, fontfamily='sans-serif')
+        ax.text(0.80, y, stars_text, ha='right', va='center',
+                color=ACCENT_GOLD, fontsize=14, fontfamily='sans-serif')
 
         # Commits (further right)
         commits_text = f'◆ {repo["commits"]} commits'
         ax.text(0.97, y, commits_text, ha='right', va='center',
-                color=ACCENT_GREEN, fontsize=10, fontfamily='sans-serif')
+                color=ACCENT_GREEN, fontsize=14, fontfamily='sans-serif')
 
     ax.set_xlim(0, 1)
     ax.set_ylim(-0.04, 1.0)

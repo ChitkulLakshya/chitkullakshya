@@ -126,7 +126,7 @@ Currently exploring **AI-integrated web apps**, **no-code/low-code tools**, and 
 
 <div align="center">
 
-<img src="assets/repo-ranking.png" alt="" width="90%"/>
+<img src="assets/repo-ranking.png" alt="" width="100%"/>
 
 </div>
 
