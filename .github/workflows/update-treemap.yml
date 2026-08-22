@@ -1,4 +1,4 @@
-name: Update Language Treemap
+name: Update Profile Stats
 
 on:
   schedule:
@@ -11,12 +11,15 @@ on:
     paths:
       - '.github/workflows/update-treemap.yml'
       - 'scripts/gen_language_treemap.py'
+      - 'scripts/gen_contribution_heatmap.py'
+      - 'scripts/gen_repo_ranking.py'
+      - 'scripts/gen_activity_heatmap.py'
 
 permissions:
-  contents: write # Needed to commit the updated treemap back to the repo
+  contents: write # Needed to commit updated PNGs back to the repo
 
 jobs:
-  update-treemap:
+  update-stats:
     runs-on: ubuntu-latest
 
     steps:
@@ -32,20 +35,38 @@ jobs:
         run: |
           pip install --no-cache-dir matplotlib squarify
 
-      - name: Generate language treemap
+      - name: Generate language donut chart
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           python scripts/gen_language_treemap.py --user ChitkulLakshya --output assets/language-treemap.png
 
-      - name: Commit updated treemap
+      - name: Generate contribution heatmap
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          python scripts/gen_contribution_heatmap.py --user ChitkulLakshya --output assets/contribution-heatmap.png
+
+      - name: Generate repo ranking
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          python scripts/gen_repo_ranking.py --user ChitkulLakshya --output assets/repo-ranking.png
+
+      - name: Generate activity heatmap
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          python scripts/gen_activity_heatmap.py --user ChitkulLakshya --output assets/activity-heatmap.png
+
+      - name: Commit updated stats
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add assets/language-treemap.png
+          git add assets/language-treemap.png assets/contribution-heatmap.png assets/repo-ranking.png assets/activity-heatmap.png
           if git diff --cached --quiet; then
-            echo "No changes to treemap, skipping commit."
+            echo "No changes to stats, skipping commit."
           else
-            git commit -m "chore: auto-update language treemap [skip ci]"
+            git commit -m "chore: auto-update profile stats [skip ci]"
             git push
           fi

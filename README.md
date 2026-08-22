@@ -122,3 +122,38 @@ Currently exploring **AI-integrated web apps**, **no-code/low-code tools**, and 
 </tr>
 </table>
 
+---
+
+<div align="center">
+
+<img src="assets/contribution-heatmap.png" alt="" width="95%"/>
+
+</div>
+
+---
+
+<div align="center">
+
+<img src="assets/repo-ranking.png" alt="" width="90%"/>
+
+</div>
+
+---
+
+<div align="center">
+
+<img src="assets/activity-heatmap.png" alt="" width="95%"/>
+
+</div>
+
+---
+
+<div align="center">
+
+<img src="https://github-readme-stats.vercel.app/api?username=chitkullakshya&show_icons=true&theme=dark&hide_border=true&count_private=true" width="49%"/>
+<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=chitkullakshya&layout=compact&theme=dark&hide_border=true&count_private=true" width="49%"/>
+
+<img src="https://streak-stats.demolab.com/?user=chitkullakshya&theme=dark&hide_border=true" width="70%"/>
+
+</div>
+
