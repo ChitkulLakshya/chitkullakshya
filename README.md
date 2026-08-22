@@ -152,8 +152,7 @@ Currently exploring **AI-integrated web apps**, **no-code/low-code tools**, and 
 
 <div align="center">
 
-<img src="https://github-readme-stats-eight-theta.vercel.app/api?username=chitkullakshya&show_icons=true&theme=dark&hide_border=true&count_private=true" width="49%"/>
-<img src="https://github-readme-stats-eight-theta.vercel.app/api/top-langs/?username=chitkullakshya&layout=compact&theme=dark&hide_border=true&count_private=true" width="49%"/>
+<img src="https://github-readme-stats-eight-theta.vercel.app/api?username=chitkullakshya&show_icons=true&theme=dark&hide_border=true&count_private=true" width="70%"/>
 
 <img src="https://streak-stats.demolab.com/?user=chitkullakshya&theme=dark&hide_border=true" width="70%"/>
 
