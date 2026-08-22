@@ -124,7 +124,7 @@ Currently exploring **AI-integrated web apps**, **no-code/low-code tools**, and 
 <table>
 <tr>
 <td width="40%" align="center" valign="middle">
-<img src="assets/skills-animation.gif" alt="" width="70%"/>
+<img src="assets/skills-animation.gif" alt="" width="100%"/>
 </td>
 <td width="60%" align="center" valign="middle">
 <img src="assets/language-treemap.png" alt="" width="100%"/>
