@@ -7,7 +7,7 @@ const puppeteer = require('puppeteer');
 const PROJECT_ROOT = path.resolve(__dirname, '..');
 const LOTTIE_JSON = path.join(PROJECT_ROOT, 'developer skills.json');
 const FRAMES_DIR = path.join(PROJECT_ROOT, '.preview', 'frames');
-const OUTPUT_SIZE = 480; // render at 480x480 to keep GIF small
+const OUTPUT_SIZE = 576; // 80% of 720, transparent background
 const FRAME_STEP = 2;    // capture every 2nd frame (125 frames at ~12.5fps)
 
 async function main() {
@@ -22,7 +22,7 @@ async function main() {
 <html><head><meta charset="UTF-8">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.12.2/lottie.min.js"></script>
 <style>
-  body { margin:0; background:#0d1117; display:flex; align-items:center; justify-content:center; height:100vh; }
+  body { margin:0; background:transparent; display:flex; align-items:center; justify-content:center; height:100vh; }
   #anim { width:${OUTPUT_SIZE}px; height:${OUTPUT_SIZE}px; }
 </style>
 </head>

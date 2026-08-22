@@ -20,10 +20,15 @@ def main():
     frames = []
     for fp in frame_paths:
         img = Image.open(fp).convert('RGBA')
-        # Composite onto dark background (matches GitHub dark theme)
-        bg = Image.new('RGBA', img.size, (13, 17, 23, 255))  # #0d1117
-        bg.paste(img, mask=img.split()[3] if img.mode == 'RGBA' else None)
-        frames.append(bg.convert('P', palette=Image.ADAPTIVE, colors=MAX_COLORS))
+        # Composite onto a transparent background — preserve alpha for GIF
+        # Flatten alpha into palette: transparent pixels become palette index 255
+        alpha = img.split()[3]
+        # Create a P-mode image with a transparent index
+        p = img.convert('RGB').convert('P', palette=Image.ADAPTIVE, colors=MAX_COLORS - 1)
+        # Reserve index 255 for transparency
+        p.paste(255, mask=Image.eval(alpha, lambda a: 255 if a < 128 else 0))
+        p.info['transparency'] = 255
+        frames.append(p)
 
     print(f'Composing GIF with {len(frames)} frames at {FRAME_DURATION}ms/frame...')
 
