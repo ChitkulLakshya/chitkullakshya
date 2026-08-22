@@ -10,7 +10,7 @@
 </td>
 <td width="75%" align="right" valign="middle">
 
-<img src="assets/coder.gif" alt="Coder" width="40%"/>
+<img src="assets/coder.gif" alt="Coder" width="70%"/>
 
 </td>
 </tr>
